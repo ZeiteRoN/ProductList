@@ -6,13 +6,46 @@
 	</div>
 	<div class="mr-2 flex gap-3 items-center text-2xl">
 		<div>
-			<a href="">Add new</a>
+			<a id="js-home-link" href="">Home</a>
 		</div>
 		<div>
-			<a href="">Contact</a>
+			<a id="js-form-link" href="">Form</a>
 		</div>
 		<div>
-			<a href="">Log in</a>
+			<a id="js-contact-link" href="">Contact</a>
+		</div>
+		<div>
+			<a id="js-login-link" href="">Log in</a>
 		</div>
 	</div>
 </div>
+<script>
+	$(document).ready(function() {
+		$('#js-home-link').click(function(e) {
+			e.preventDefault();
+			$.get('<?php echo site_url('home'); ?>', function(data) {
+				$('#content').html(data);
+			});
+		});
+
+		$('#js-form-link').click(function(e) {
+			e.preventDefault();
+			$.get('<?php echo site_url('form'); ?>', function(data) {
+				$('#content').html(data);
+			});
+		});
+		$('#js-contact-link').click(function(e) {
+			e.preventDefault();
+			$.get('<?php echo site_url('contact'); ?>', function(data) {
+				$('#content').html(data);
+			});
+		});
+		$('#js-login-link').click(function(e) {
+			e.preventDefault();
+			$.get('<?php echo site_url('login'); ?>', function(data) {
+				$('#content').html(data);
+			});
+		});
+	});
+</script>
+

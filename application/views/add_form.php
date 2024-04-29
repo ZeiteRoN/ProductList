@@ -1,12 +1,12 @@
-<!doctype html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>New List</title>
-</head>
-<body>
-	<?php include ("Partials/nav.php");?>
-</body>
-</html>
+<div id="content" class="h-60 w-64 border-2 shadow-2xl">
+	<div>
+		<select name="category" id="js-category">
+			<?php //foreach ($categories as $category) ?>
+			<option value="1">Хімія</option>
+			<option value="2">Продукти</option>
+		</select>
+	</div>
+	<div>
+		<textarea name="products" id="js-product-list" cols="20" rows="10" placeholder="Введіть списко продуктів"></textarea>
+	</div>
+</div>
