@@ -8,7 +8,7 @@
 <body>
 	<?php include ("Partials/nav.php"); ?>
 	<div id="main-content">
-
+		Діч
 	</div>
 </body>
 </html>
@@ -18,7 +18,7 @@
 		var currentUrl = window.location.href;
 		$('#main-content').load(currentUrl + ' #content');
 
-		$('#js-home-link, #js-contact-link, #js-login-link').click(function(e) {
+		$('#js-home-link, #js-lists-link, #js-contact-link, #js-login-link').click(function(e) {
 			e.preventDefault();
 			var url = $(this).attr('href');
 			$('#main-content').load(url);

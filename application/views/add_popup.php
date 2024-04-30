@@ -6,8 +6,9 @@
 		<form action="<?php echo 'create'?>" method="post" class="flex flex-col gap-6">
 			<div>
 				<select name="category" id="js-category-select"  class="border-2 border-gray-300 rounded-md p-2">
-					<option value="0">Хімія</option>
-					<option value="1">Продукти</option>
+					<?php foreach ($categories as $category): ?>
+					<option value="<?php echo $category->id; ?>"><?php echo $category->category; ?></option>
+					<?php endforeach; ?>
 				</select>
 			</div>
 			<div>
