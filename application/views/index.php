@@ -8,7 +8,7 @@
 <body>
 	<?php include ("Partials/nav.php"); ?>
 	<div id="main-content">
-		Діч
+		<?php include ("home_view.php")?>
 	</div>
 </body>
 </html>

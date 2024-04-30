@@ -2,9 +2,12 @@
 
 class Lists_model extends \CI_Model
 {
-	public function getData()
+	public function getCategoriesData()
 	{
-		$query = $this->db->get('categories');
-		return $query->result();
+		return $this->db->get('categories')->result();
+	}
+	public function getListsData()
+	{
+		return $this->db->get('lists')->result();
 	}
 }

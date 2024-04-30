@@ -1,5 +1,10 @@
 <div id="content">
-	<div class="h-48 w-64 rounded flex">
+	<div class="flex gap-4">
+		<?php foreach ($lists as $list) :
+			include ("Partials/list_card.php");
+		endforeach; ?>
+	</div>
+	<div class="h-64 w-48 rounded flex">
 		<button id="js-add-button" class="hover:scale-105 hover:shadow transition border-4 m-auto w-12 h-12 rounded-3xl font-bold text-3xl">+</button>
 	</div>
 	<div id="js-popup-cont" class="hidden">
