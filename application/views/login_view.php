@@ -1,3 +1,3 @@
 <div id="content">
-	Contact
+	Log in
 </div>

@@ -4,6 +4,14 @@ class Form_controller extends CI_Controller
 {
 	function index()
 	{
-		$this->load->view('add_form');
+		$this->load->view('add_popup');
+	}
+	public function fetchData()
+	{
+		$data = [
+			'category_id' => $this->input->post('category'),
+			'products' => $this->input->post('products'),
+		];
+		var_dump($data);
 	}
 }
