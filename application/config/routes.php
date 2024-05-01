@@ -61,6 +61,9 @@ $route['contact'] = 'Page_controller/getContactView';
 $route['login'] = 'Page_controller/getLoginView';
 
 //DB Routes
-$route['create']  = 'Form_controller/fetchData';
+$route['create']  = 'Lists_controller/create';
+$route['delete/(:any)']  = 'Lists_controller/delete/$1';
+
+$route['createCategory']  = 'Category_controller/createCategory';
 
 

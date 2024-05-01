@@ -9,4 +9,18 @@ class Lists_controller extends CI_Controller
 		$data['categories'] =  $this->Lists_model->getData();
 		$this->load->view('lists_view',$data);
 	}
+	public function create()
+	{
+		$data = [
+			'category_id' => $this->input->post('category'),
+			'text' => $this->input->post('products')
+		];
+		$this->load->model('Lists_model');
+		$this->Lists_model->insertListsData( $data);
+	}
+	public function delete($id)
+	{
+		$this->load->model('Lists_model');
+		$this->Lists_model->deleteListsData($id);
+	}
 }

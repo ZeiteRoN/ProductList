@@ -13,7 +13,8 @@ class Page_controller extends CI_Controller
 	{
 		$this->load->database();
 		$this->load->model('Lists_model');
-		$data['categories'] =  $this->Lists_model->getCategoriesData();
+		$this->load->model('Category_model');
+		$data['categories'] =  $this->Category_model->getCategoriesData();
 		$data['lists']  = $this->Lists_model->getListsData();
 		$this->load->view('lists_view',$data);
 	}
