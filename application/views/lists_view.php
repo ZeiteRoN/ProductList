@@ -27,14 +27,13 @@
 					<button class="bg-blue-600 rounded-lg">Фільтрувати</button>
 				</form>
 			</div>
-
-			<div class="flex gap-4">
+			<div class="flex gap-4 p-4">
 				<?php foreach ($lists as $list) :
 					include ("Partials/list_card.php");
 				endforeach; ?>
 			</div>
 		</div>
-		<div class="h-64 w-48 rounded flex">
+		<div class="h-32 w-56 rounded flex">
 			<button id="js-add-button" class="hover:scale-105 hover:shadow transition border-4 m-auto w-12 h-12 rounded-3xl font-bold text-3xl">+</button>
 		</div>
 		<div class="flex gap-6">
@@ -52,8 +51,7 @@
 	$(document).ready(function () {
 		const
 			$popupCont = $('#content').find('#js-popup-cont'),
-			$categoryPopup = $('#content').find('#js-category-popup'),
-			$filterSelect  = $('#content').find('#filter-select')
+			$categoryPopup = $('#content').find('#js-category-popup')
 		;
 		$('#js-add-button').on("click", function () {
 			$popupCont.removeClass('hidden');
@@ -65,6 +63,5 @@
 		$('#js-close-category').on("click", function () {
 			$categoryPopup.addClass('hidden');
 		})
-
 	})
 </script>

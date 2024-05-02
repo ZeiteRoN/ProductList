@@ -4,7 +4,6 @@ class Lists_controller extends CI_Controller
 {
 	function index()
 	{
-
 		$this->load->model('Lists_model');
 		$data['lists'] =  $this->Lists_model->getListsData();
 
@@ -23,8 +22,6 @@ class Lists_controller extends CI_Controller
 
 		$this->load->model('Category_model');
 		$data['categories'] =  $this->Category_model->getCategoriesData();
-
-
 		$this->load->view('lists_view', $data);
 	}
 	public function filterByStatus()

@@ -7,7 +7,7 @@
 	</div>
 	<div class="mr-2 flex gap-3 items-center text-2xl">
 		<div>
-			<a id="js-lists-link" href="<?php echo "lists"; ?>">Lists</a>
+			<a id="js-lists-link" href="<?php echo "lists"; ?>">Списки</a>
 		</div>
 	</div>
 </div>

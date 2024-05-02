@@ -4,7 +4,17 @@ class Lists_model extends \CI_Model
 {
 	public function getListsData()
 	{
-		return $this->db->get('lists')->result();
+		$categories = $this->db->get('categories')->result();
+		$lists = $this->db->get('lists')->result();
+
+		foreach ($lists as $list) {
+			foreach ($categories as $category) {
+				if($list->category_id === $category->id) {
+					$list->category_title = $category->category;
+				}
+			}
+		}
+		return $lists;
 	}
 	public function getFilteredData($category_id)
 	{
