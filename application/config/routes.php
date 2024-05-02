@@ -54,15 +54,17 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
 //Page Routes
-$route['index'] = 'Page_controller/getIndexView';
-$route['home'] = 'Page_controller/getHomeView';
-$route['lists'] = 'Page_controller/getListsView';
+$route['index']   = 'Page_controller/getIndexView';
+$route['lists']   = 'Page_controller/getListsView';
 $route['contact'] = 'Page_controller/getContactView';
-$route['login'] = 'Page_controller/getLoginView';
+$route['login']   = 'Page_controller/getLoginView';
 
 //DB Routes
-$route['create']  = 'Lists_controller/create';
-$route['delete/(:any)']  = 'Lists_controller/delete/$1';
+$route['create']            = 'Lists_controller/create';
+$route['delete/(:any)']     = 'Lists_controller/delete/$1';
+$route['filterById']        = 'Lists_controller/filter/$1';
+$route['filterByStatus']    = 'Lists_controller/filterByStatus/$1';
+$route['setStatus/(:any)']  = 'Lists_controller/setStatus/$1';
 
 $route['createCategory']  = 'Category_controller/createCategory';
 

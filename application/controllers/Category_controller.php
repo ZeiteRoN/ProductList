@@ -8,5 +8,6 @@ class Category_controller extends CI_Controller
 		];
 		$this->load->model('Category_model');
 		$this->Category_model->createCategory($data);
+		redirect('lists');
 	}
 }

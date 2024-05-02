@@ -18,12 +18,4 @@ class Page_controller extends CI_Controller
 		$data['lists']  = $this->Lists_model->getListsData();
 		$this->load->view('lists_view',$data);
 	}
-	public function getContactView()
-	{
-		$this->load->view('contact_view');
-	}
-	public function getLoginView()
-	{
-		$this->load->view('login_view');
-	}
 }

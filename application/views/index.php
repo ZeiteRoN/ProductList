@@ -3,25 +3,15 @@
 <head>
 	<title>Home</title>
 </head>
-<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-<script src="https://cdn.tailwindcss.com"></script>
 <body>
 	<?php include ("Partials/nav.php"); ?>
 	<div id="main-content">
-
+		<div id="content" class="flex flex-col">
+			<div class="w-full h-24 text-2xl">
+				Це місце, де ви можете комфортно зберігати списки покупок та з доступом з будь-якого місця
+			</div>
+		</div>
 	</div>
 </body>
 </html>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script>
-	$(document).ready(function() {
-		var currentUrl = window.location.href;
-		$('#main-content').load(currentUrl + ' #content');
 
-		$('#js-home-link, #js-lists-link, #js-contact-link, #js-login-link').click(function(e) {
-			e.preventDefault();
-			var url = $(this).attr('href');
-			$('#main-content').load(url);
-		});
-	});
-</script>
